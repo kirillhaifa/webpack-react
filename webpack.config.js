@@ -1,5 +1,6 @@
 const path = require('path'); //для того чтобы превратить относительный путь в абсолютный, мы будем использовать пакет path
 const HTMLWebpackPlugins = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подключили плагин 
 
 module.exports = {
     entry: path.resolve(__dirname, './src/index.ts'), //точка входа в наше приложение содержит абсолютный путь к index.ts
@@ -30,5 +31,6 @@ module.exports = {
       new HTMLWebpackPlugins({
          template: path.resolve(__dirname, 'public/index.html')
       }),
+      new CleanWebpackPlugin(), // использовали плагин
    ]
 };
