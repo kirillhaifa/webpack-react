@@ -1,3 +1,10 @@
+
+import style from './index.module.scss';
+import './assets/images/dog.jpg';
+import './index.scss';
+
+console.log(style); //использование объекта style важно для попадания стилей в css-бандл
+
 const numbers:number[] = [2, 3, 5];
 
 // Стрелочная функция. Не запнётся ли на ней Internet Explorer?
